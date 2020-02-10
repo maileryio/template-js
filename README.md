@@ -2,25 +2,19 @@
 
 **_____**
 
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
-[![npm download][download-image]][download-url]
+[![Latest Stable Version][npm-image]][npm-url]
+[![Total Downloads][download-image]][download-url]
+[![Build Status][travis-image]][travis-url]
+[![Test Coverage][codecov-image]][codecov-url]
 
 [npm-image]: https://img.shields.io/npm/v/@maileryio/_____.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/@maileryio/_____
+[download-image]: https://img.shields.io/npm/dm/@maileryio/_____.svg?style=flat-square
+[download-url]: https://npmjs.org/package/@maileryio/_____
 [travis-image]: https://travis-ci.com/maileryio/_____.svg?branch=master
 [travis-url]: https://travis-ci.com/maileryio/_____
 [codecov-image]: https://img.shields.io/codecov/c/github/hubcarl/@maileryio/_____.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/hubcarl/@maileryio/_____?branch=master
-[david-image]: https://img.shields.io/david/hubcarl/@maileryio/_____.svg?style=flat-square
-[david-url]: https://david-dm.org/hubcarl/@maileryio/_____
-[snyk-image]: https://snyk.io/test/npm/@maileryio/_____/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/@maileryio/_____
-[download-image]: https://img.shields.io/npm/dm/@maileryio/_____.svg?style=flat-square
-[download-url]: https://npmjs.org/package/@maileryio/_____
 
 _____
 
