@@ -16,6 +16,7 @@
     "cov": "echo \"Error: no codecov specified\" && exit 1",
     "ci": "npm run lint && npm run cov",
     "test:unit": "vue-cli-service test:unit test/**/*.test.js",
+    "watch": "yarn run build --watch",
     "build": "yarn run build:es & yarn run build:unpkg & yarn run build:umd & yarn run build:umd:min",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/main.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/main.min.js",
