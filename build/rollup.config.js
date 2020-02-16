@@ -4,6 +4,8 @@ import buble from 'rollup-plugin-buble';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import { eslint } from 'rollup-plugin-eslint';
+import sassPostcss from 'rollup-plugin-sass-postcss';
+import autoprefixer from 'autoprefixer';
 
 const env = process.env.NODE_ENV || 'development';
 const isProd = env === 'production';
@@ -15,24 +17,29 @@ export default (async () => ({
     exports: 'named',
     sourcemap: true,
     globals: {
+      'bootstrap-vue': 'BootstrapVue',
       'vue': 'Vue',
       'vuex': 'Vuex'
     }
   },
   external: [
+    'bootstrap-vue',
     'vue',
     'vuex'
   ],
   plugins: [
-    eslint({
-      exclude: [
-        'src/styles/**'
-      ]
-    }),
+    eslint(),
     commonjs(),
     resolve(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env)
+    }),
+    sassPostcss({
+      output: 'dist/main.min.css',
+      sourcemap: true,
+      plugins: [
+        autoprefixer()
+      ]
     }),
     vue({
       css: true,
