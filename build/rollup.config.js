@@ -1,7 +1,8 @@
-import commonjs from 'rollup-plugin-commonjs';
+import buble from '@rollup/plugin-buble';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
 import vue from 'rollup-plugin-vue';
-import buble from 'rollup-plugin-buble';
-import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import { eslint } from 'rollup-plugin-eslint';
 import sassPostcss from 'rollup-plugin-sass-postcss';
@@ -30,7 +31,10 @@ export default (async () => ({
   plugins: [
     eslint(),
     commonjs(),
-    resolve(),
+    json(),
+    resolve({
+      preferBuiltins: true
+    }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env)
     }),
