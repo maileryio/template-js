@@ -6,6 +6,8 @@ import vue from 'rollup-plugin-vue';
 import resolve from 'rollup-plugin-node-resolve';
 import { eslint } from 'rollup-plugin-eslint';
 import sassPostcss from 'rollup-plugin-sass-postcss';
+import globals from 'rollup-plugin-node-globals';
+import builtins from 'rollup-plugin-node-builtins';
 import autoprefixer from 'autoprefixer';
 
 const env = process.env.NODE_ENV || 'development';
@@ -29,6 +31,8 @@ export default (async () => ({
     'vuex'
   ],
   plugins: [
+    globals(),
+    builtins(),
     eslint(),
     commonjs(),
     json(),
