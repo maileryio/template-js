@@ -31,14 +31,15 @@ export default (async () => ({
     'vuex'
   ],
   plugins: [
-    globals(),
-    builtins(),
-    eslint(),
-    commonjs(),
-    json(),
     resolve({
+      browser: true,
       preferBuiltins: true
     }),
+    commonjs(),
+    globals(),
+    builtins(),
+    json(),
+    eslint(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env)
     }),
